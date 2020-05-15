@@ -1,12 +1,10 @@
 from grafy import Graf, losowanie_grafu
 
 if __name__ == "__main__":
-    input("numerujemy wierzcholki od 0!")
+    print("numerujemy wierzcholki od 0!")
     ilosc_wierzcholkow = int(input("podaj ilosc wierzcholkow: "))
     grafy = Graf(ilosc_wierzcholkow)
+    a = int(input("podaj ilosc krawedzi: "))
+    losowanie_grafu(grafy, a)
     grafy.wypisanie_macierzy()
-    grafy.dodaj_krawedz(1, 2)
-    grafy.sasiedzi(1)
-    grafy.wypisanie_macierzy()
-    losowanie_grafu(grafy, 5)
-    grafy.wypisanie_macierzy()
+    print(grafy.szukanie_spojnych_skladowych())
